@@ -10,7 +10,7 @@ $(document).ready(function()
 		e.preventDefault();
 	});	
 	$('#myCarousel').carousel({
-		interval: 10000
+	  interval: 10000
 	});
 	$('#llnl-menu-carousel').carousel({
 		interval: false

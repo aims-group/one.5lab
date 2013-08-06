@@ -1,0 +1,17 @@
+{% extends "base.j2" %}
+
+{% block container %}
+
+<div class="hero-unit">
+  {% filter markdown -%}
+  {% block hero %}{% endblock %}
+  {%- endfilter %}
+</div>
+
+<div class="row">
+  {% filter markdown -%}
+  {% block main %}{% endblock %}
+  {%- endfilter %}
+</div>
+
+{% endblock container %}

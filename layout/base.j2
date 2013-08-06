@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{{ resource.meta.title }}{% endblock %} | {{ site_title }}</title>
+
+    <link rel="stylesheet" href="media/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" href="media/css/bootstrap.mods.css" media="screen" />
+    <link rel="stylesheet" href="media/css/shadowbox.css" media="screen" />
+    <link rel="stylesheet" href="media/css/main.css" media="screen" />
+
+    {% block css %}{% endblock %}
+
+  </head>
+  <body class="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+
+    {% block body %}
+
+    <div class="smallllnlmenu">
+      <div class="container">
+        <p class="llnl-menu-tab pull-right"><a href="https://www.llnl.gov" target="_blank"><span>Lawrence Livermore National Laboratory</span></a></p>
+      </div>
+    </div>
+    <div id="llnl-menu" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <div class="span9">
+            <div id="llnl-menu-carousel" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="active item">
+
+                  <div class="span3 llnl-menu-nav">
+                    <p><strong>LLNL LATEST HEADLINES</strong></p>
+                    <div id="headlines"><!-- this is generated --></div>
+                  </div>
+
+                  <span class="div-line"></span>
+                  <div class="span2 llnl-menu-nav">
+                    <p><strong>ABOUT LLNL</strong></p>
+                    <ul class="unstyled">
+                      <li><a href="https://www.llnl.gov/about/whatwedo.html" target="_blank">What We Do</a></li>
+                      <li><a href="https://www.llnl.gov/about/howwedoit.html" target="_blank">How We Do It</a></li>
+                      <li><a href="https://www.llnl.gov/about/ourvalues.html" target="_blank">Our Values</a></li>
+                      <li><a href="https://www.llnl.gov/about/organization.html" target="_blank">Organization</a></li>
+                      <li><a href="https://www.llnl.gov/about/mgtsponsors.html" target="_blank">Management &amp; Sponsors</a></li>
+                      <li><a href="https://www.llnl.gov/about/publications.html" target="_blank">Publications</a></li>
+                      <li><a href="https://www.llnl.gov/about/history.html" target="_blank">History</a></li>
+                    </ul>
+                  </div>
+
+                  <span class="div-line"></span>
+                  <div class="span2 llnl-menu-nav">
+                    <p><strong>MISSION AREAS</strong></p>
+                    <ul class="unstyled">
+                      <li><a href="https://missions.llnl.gov/biosecurity" target="_blank">Bio-Security</a></li>
+                      <li><a href="https://missions.llnl.gov/counterterrorism" target="_blank">Counterterrorism</a></li>
+                      <li><a href="https://missions.llnl.gov/defense" target="_blank">Defense</a></li>
+                      <li><a href="https://missions.llnl.gov/energy" target="_blank">Energy</a></li>
+                      <li><a href="https://missions.llnl.gov/intelligence" target="_blank">Intelligence </a></li>
+                      <li><a href="https://missions.llnl.gov/nonproliferation" target="_blank">Nonproliferation</a></li>
+                      <li><a href="https://wci.llnl.gov/" target="_blank">Weapons &amp; Complex Integration</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="span2 llnl-menu-nav">
+                    <p><strong>ORGANIZATIONS</strong></p>
+                      <ul class="unstyled">
+                        <li><a href="https://www-gs.llnl.gov/" target="_blank">Global Security</a></li>
+                        <li><a href="https://lasers.llnl.gov/" target="_blank">National Ignition Facility</a></li>
+                        <li><a href="https://www.llnl.gov/about/operations.html" target="_blank">Operations</a></li>
+                        <li><a href="https://computing.llnl.gov/" target="_blank">High Performance Computing</a></li>
+                        <li><a href="https://st.llnl.gov/" target="_blank">Science &amp; Technology</a></li>
+                        <li><a href="https://wci.llnl.gov/" target="_blank">Weapons &amp; Complex Integration</a></li>
+                      </ul>
+                    </div>
+
+                    <span class="div-line"></span>
+                    <div class="span2 llnl-menu-nav">
+                      <p><strong>NEWS CENTER</strong></p>
+                      <ul class="unstyled">
+                        <li><a href="https://www.llnl.gov/news/aroundthelab" target="_blank">Around the Lab</a></li>
+                        <li><a href="https://www.llnl.gov/news/newscentercontacts.html" target="_blank">Contacts</a></li>
+                        <li><a href="https://www.llnl.gov/news/newscentercontacts.html" target="_blank">For Reporters</a></li>
+                        <li><a href="https://www.llnl.gov/news/lab_report" target="_blank">Livermore Lab Report</a></li>
+                        <li><a href="https://www.llnl.gov/news/newsarchive.html" target="_blank">News Archive</a></li>
+                        <li><a href="https://www.llnl.gov/news/newsreleases" target="_blank">News Releases</a></li>
+                      </ul>
+                    </div>
+
+                    <span class="div-line"></span>
+                    <div class="span3 llnl-menu-nav">
+                      <p><strong>PARTNERSHIPS</strong></p>
+                      <ul class="unstyled">
+                        <li><a href="https://www.llnl.gov/lvoc/lvoc.html">Livermore Valley Open Campus</a></li>
+                        <li><a href="https://ipo.llnl.gov/" target="_blank">Industrial Partnerships Office</a></li>
+                        <li><a href="https://ipo.llnl.gov/?q=technologies" target="_blank">Available Technologies</a></li>
+                        <li><a href="https://ipo.llnl.gov/?q=resources-industry" target="_blank">For Industry</a></li>
+                        <li><a href="https://ipo.llnl.gov/?q=resources-inventors" target="_blank">For Inventors</a></li>
+                        <li><a href="https://ipo.llnl.gov/?q=resources-students" target="_blank">For Students</a></li>
+                        <li><a href="https://ipo.llnl.gov/?q=resources-entrepreneurs" target="_blank">For Entrepreneurs</a></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="span2 llnl-menu-nav">
+                      <p><strong>VISITING</strong></p>
+                        <ul class="unstyled">
+                          <li><a href="https://www.llnl.gov/about/directions.html" target="_blank">Maps &amp; Directions</a></li>
+                          <li><a href="https://www.llnl.gov/about/badging.html" target="_blank">Badging</a></li>
+                          <li><a href="https://www.llnl.gov/about/discoverycenter.html" target="_blank">Discovery Center</a></li>
+                          <li><a href="https://www.llnl.gov/about/tours.html" target="_blank">Site Tours</a></li>
+                          <li><a href="https://www.llnl.gov/about/weather.html" target="_blank">Current Weather</a></li>
+                          <li><a href="https://protocol.llnl.gov" target="_blank">Protocol Office</a></li>
+                          <li><a href="http://www.trivalleycvb.com/listings/index.cfm?action=listlistings&amp;catid=2&amp;notify=1" target="_blank">Where to stay</a></li>
+                          <li><a href="http://www.trivalleycvb.com/" target="_blank">Tri-Valley Visitors Bureau</a></li>
+                          <li><a href="http://www.ci.livermore.ca.us/" target="_blank">City of Livermore</a></li>
+                        </ul>
+                      </div>
+
+                      <span class="div-line"></span>
+                      <div class="span2 llnl-menu-nav">
+                        <p><strong>COMMUNITY</strong></p>
+                        <ul class="unstyled">
+                          <li><a href="https://newsline.llnl.gov/" target="_blank">LLNL Community News</a></li>
+                          <li><a href="https://www.llnl.gov/community/giving.html" target="_blank">Community giving</a></li>
+                          <li><a href="https://www.llnl.gov/community/llns.html" target="_blank">Corporate giving</a></li>
+                          <li><a href="https://www-envirinfo.llnl.gov/" target="_blank">Environmental information</a></li>
+                          <li><a href="https://www.llnl.gov/community/communitycentercontacts.html" target="_blank">Community Center Contacts</a></li>
+                          <li><a href="https://www.llnl.gov/community/discoverllnlnewsletter.html" target="_blank">Discover LLNL Newsletter</a></li>
+                          <li><a href="https://www.llnl.gov/community/volunteeropportunities.html" target="_blank">Volunteer Opportunities</a></li>
+                        </ul>
+                      </div>
+
+                      <span class="div-line"></span>
+                      <div class="span3 llnl-menu-nav">
+                        <p><strong>EDUCATION</strong></p>
+                        <ul class="unstyled">
+                          <li><a href="https://scholars.llnl.gov/" target="_blank">Internships</a></li>
+                          <li><a href="https://postdocs.llnl.gov/" target="_blank">Postdocs</a></li>
+                          <li><a href="http://education.llnl.gov/" target="_blank">K - 12 Outreach</a></li>
+                          <li><a href="https://www.llnl.gov/about/tours.html" target="_blank">Site Tours</a></li>
+                          <li><a href="https://www.llnl.gov/education/schooltours.html" target="_blank">School Tours</a></li>
+                          <li><a href="https://www.llnl.gov/education/schooltours.html#clubtours" target="_blank">Club Tours</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="span7 llnl-menu-nav">
+                        <p><strong>CAREERS</strong></p>
+                        <ul class="unstyled">
+                          <li><a href="https://careers.llnl.gov/" target="_blank">Careers@LLNL</a></li>
+                          <li><a href="https://postdocs.llnl.gov/?q=openings" target="_blank">Postdoctoral Opportunities</a></li>
+                          <li><a href="https://scholars.llnl.gov/lhire/studentfaculty.html" target="_blank">College Internships</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                  <a class="carousel-control left" href="#llnl-menu-carousel" data-slide="prev">&lsaquo;</a>
+                  <a class="carousel-control right" href="#llnl-menu-carousel" data-slide="next">&rsaquo;</a>
+                </div>
+              </div>
+
+              <div class="span3">
+                <div class="span3 llnl-menu-nav">
+                  <div class="llnlsitesearch">
+                    <p><strong>LLNL SEARCH</strong></p>
+                    <form class="navbar-search" action="search.php" method="post">
+                      <input type="search" class="search-query" name="googleseachTerm" placeholder="search LLNL..."><input name="searchwhat" type="hidden" value="LLNL" />
+                    </form>
+                  </div>
+
+                  <div class="llnlpeoplesearch">
+                    <p><strong>People SEARCH</strong></p>
+                    <form class="navbar-search" action="search.php" method="post">
+                      <input type="search" class="search-query" name="searchvalue" placeholder="search people..."><input name="searchwhat" type="hidden" value="people" />
+                    </form>
+                  </div>
+
+                  <div class="llnlseachtoggle">
+                    <label class="checkbox">
+                      <input type="checkbox" id="llnlseachtoggle"> toggle (people vs site)
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div id="header-fat" class="navbar navbar-fixed-top navbar-noFixed">
+      <div id="brand" class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{ home_url }}">{{ site_title }}</a>
+          <p id="llnl-menu-tab" class="pull-right"><a href="#llnl-tab"><span>Lawrence Livermore National Laboratory</span></a></p>
+        </div>
+      </div>
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse">
+            {% from "macros.j2" import render_main_menu with context %}
+            {{ render_main_menu() }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="top">
+      {% filter markdown -%}
+      {% block container %}
+
+      {% endblock container %}
+      {%- endfilter %}
+      <hr>
+      <footer>
+        {% block footer %}
+        {# Enter any footer information you want here #}
+        {% endblock footer %}
+      </footer>
+    </div> <!-- /container -->
+
+    {% endblock body %}
+    {% block js %}
+    {# Javascript at the bottom for fast page loading #}
+    {% block jquery %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% endblock jquery %}
+
+    {# The following line makes external links open in new windows #}
+    <script src="media/js/links.js"></script>
+
+    {% block bootstrap_scripts %}
+    <script src="media/js/libs/bootstrap.js"></script>
+    <script src="media/js/libs/bootstrap-button.js"></script>
+    <script src="media/js/libs/bootstrap-collapse.js"></script>
+    <script src="media/js/libs/bootstrap-dropdown.js"></script>
+    <script src="media/js/libs/bootstrap-transition.js"></script>
+{#  <script src="media/js/libs/bootstrap-alert.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-modal.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-scrollspy.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-tab.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-tooltip.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-popover.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-carousel.js"></script>#}
+{#  <script src="media/js/libs/bootstrap-typeahead.js"></script>#}
+    {# Uncomment any of these lines to enable that plugin on your site #}
+    {% endblock bootstrap_scripts %}
+
+    {% block scripts %}
+    <script src="media/js/shadowbox.js"></script>
+    <script src="media/js/main.js"></script>
+    <script src="media/js/global.js"></script>
+    <script src="media/js/jquery-ui-1.10.3.drop.min.js"></script>
+    {% endblock scripts %}
+
+    <!--[if lt IE 7 ]>
+      <script src="{{ media_url('js/libs/dd_belatedpng.js') }}"></script>
+      <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]-->
+
+    {% endblock js %}
+  </body>
+</html>

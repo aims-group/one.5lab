@@ -1,0 +1,37 @@
+context:
+  data:
+    site_title: Analytics and Informatics Management Systems
+    home_url: index.html
+    menu:
+      - title: About
+        url: about.html
+      - title: Contributors
+        url:
+          - title: Collaborators
+            url: collaborators.html
+          - title: Team
+            url: team.html
+      - title: Documents
+        url:
+          - title: Publications
+            url: publications.html
+          - title: Reports
+            url: reports.html
+          - title: Animations
+            url: animations.html
+      - title: Projects
+        url:
+          - title: ESGF
+            url: esgf.html
+          - title: UV-CDAT
+            url: uv-cdat.html
+          - title: Test Bed
+            url: https://github.com/UV-CDAT/uvcdat/issues
+      - title: Climate Game
+        url: https://climatesim.llnl.gov/
+      - title: Wiki
+        url: http://harris112md/one.5lab/deploy/#
+media_url: media
+mode: development
+plugins: [hyde.ext.plugins.meta.MetaPlugin, hyde.ext.plugins.auto_extend.AutoExtendPlugin,
+  hyde.ext.plugins.syntext.SyntextPlugin, hyde.ext.plugins.textlinks.TextlinksPlugin]

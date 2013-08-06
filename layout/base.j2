@@ -200,6 +200,9 @@
         <div class="container">
           <a class="brand" href="{{ home_url }}">{{ site_title }}</a>
           <p id="llnl-menu-tab" class="pull-right"><a href="#llnl-tab"><span>Lawrence Livermore National Laboratory</span></a></p>
+          <form class="navbar-search pull-right visible-desktop" action="search.php" method="post"><input name="searchwhat" type="hidden" value="site" />
+            <input type="search" name="googleseachTerm" class="search-query span3" placeholder="search site...">
+          </form>
         </div>
       </div>
       <div class="navbar-inner">

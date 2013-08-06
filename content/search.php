@@ -10,7 +10,7 @@ description: Test description
 <h2> Search </h2>
 
 {% raw %}
-<?php include_once("searcher.php"); ?>
+<?php include_once("media/classes/searcher.php"); ?>
 {% endraw %}
 
 {% endblock container %}

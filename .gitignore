@@ -1,4 +1,6 @@
 _site/
-deploy/
+layout/deploy
+deploy
+*.hyde_deps
+*.DS_Store
 *.swp
-.DC_STORE

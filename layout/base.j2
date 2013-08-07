@@ -273,5 +273,96 @@
     <![endif]-->
 
     {% endblock js %}
+        <small class="pull-right" style="padding-bottom:12pt;">
+          <script type="text/javascript" language="JavaScript">
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            var calendarDate = mm+'/'+dd+'/'+yyyy;
+            //document.write(calendarDate);
+          </script>
+        </small>
+
+        <br><br>
+
+        <style type="text/css">
+          .hero-unit h1 {
+            font-size: 60px;
+          }
+          .hero-unit p {
+            font-size: 24px;
+          }
+        </style>
+
+      <div id="footer-slim" class="footer">
+        <div class="container">
+          <hr />
+          <div class="row">
+            <div class="span12">
+              <a href="http://www.llnl.gov/" target="_blank"><img src="media/images/llnl.png" alt="LLNL" border="0" /></a>
+              <p>Lawrence Livermore National Laboratory<br />7000 East Avenue &bull; Livermore, CA 94550</p>
+              <p>Operated by Lawrence Livermore National Security, LLC, for the<br />Department of Energy's National Nuclear Security Administration.</p>
+              <a class="nnsa" href="http://nnsa.energy.gov/" target="_blank"><img src="media/images/nnsa.png" alt="NNSA" border="0" /></a>
+              <a class="doe" href="http://energy.gov/" target="_blank"><img src="media/images/doe_small.png" alt="U.S. DOE" border="0" /></a>
+              <a class="llns" href="http://www.llnsllc.com/" target="_blank"><img src="media/images/llns.png" alt="LLNS" border="0" /></a>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="span12 subfooter">
+              <span>LLNL-WEB-###### &nbsp;|&nbsp;&nbsp;</span><a href="https://www.llnl.gov/disclaimer.html" target="_blank">Privacy &amp; Legal Notice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- javascript -->
+      <script src="Scripts/jquery-1.10.1.min.js"></script>
+      <script src="Scripts/global.js"></script>
+      <script src="Scripts/bootstrap.min.js"></script>
+      <script src="Scripts/shadowbox.js"></script>
+      <script src="Scripts/main.js"></script>
+
+      <!-- Piwik -->
+      <script src="Scripts/piwik.js"></script>
+      <script type="text/javascript">
+        var siteName = document.domain;
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://analytics.llnl.gov/" : "http://analytics.llnl.gov/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+          jQuery.getJSON(pkBaseURL+"get_id.php?name="+siteName+"&callback=?", function(data) {
+          try {
+            var LLNLTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            LLNLTracker.setCustomVariable(1, "onelab", "missions", "visit");
+            LLNLTracker.trackPageView();    LLNLTracker.enableLinkTracking();
+            var localSiteTracker = Piwik.getTracker(pkBaseURL + "piwik.php", data.id);
+            localSiteTracker.trackPageView();
+            localSiteTracker.enableLinkTracking();
+          }
+          catch (err) {
+            console.log(err);
+          }
+        });
+      </script>
+      <noscript><p><img src="https://analytics.llnl.gov/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+      <!-- End Piwik Tracking Code -->
+
+      <style>
+      html { overflow-y:scroll; }
+      @media (min-width: 800px) {
+        .hero-unit.hero-full-image {
+          padding: 0;
+          height: 326px;
+        }
+      }
+      @media (max-width: 799px) {
+        .hero-unit.hero-full-image {
+          padding: 0;
+          height: 200px;
+        }
+      }
+    </style>
   </body>
 </html>

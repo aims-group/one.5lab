@@ -5,11 +5,11 @@ import os
 
 os.chdir("content/media/css")
 
-subprocess.call(["rm", "bootstrap.min.css"])
-subprocess.call(["rm", "bootstrap.mods.css"])
-subprocess.call(["rm", "shadowbox.css"])
-subprocess.call(["rm", "main.css"])
-subprocess.call(["rm", "print.css"])
+os.remove("bootstrap.min.css")
+os.remove("bootstrap.mods.css")
+os.remove("shadowbox.css")
+os.remove("main.css")
+os.remove("print.css")
 
 subprocess.call(["wget", "https://www.llnl.gov/llnl-docs/onelab/templates/css/bootstrap.min.css"])
 subprocess.call(["wget", "https://www.llnl.gov/llnl-docs/onelab/templates/css/bootstrap.mods.css"])

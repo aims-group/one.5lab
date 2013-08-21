@@ -39,10 +39,10 @@ img {
 }
 [class^="icon-"],
 [class*=" icon-"] {
-  background-image: url('../Images/glyphicons-halflings.png');
+  background-image: url("../assets/images/glyphicons-halflings.png");
 }
 .icon-white {
-  background-image: url('../Images/glyphicons-halflings-white.png');
+  background-image: url("../assets/images/glyphicons-halflings-white.png");
 }
 .navbar-inner {
   min-height: 47px;
@@ -253,9 +253,9 @@ img {
 .navbar-search input {
 	width: 152px;
 }
-.carousel-control {
+/*.carousel-control {
 	left: -40px;
-}
+}*/
 .carousel-control.right {
 	right: 10px;	
 }

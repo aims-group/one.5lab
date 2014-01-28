@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python
 
 import subprocess
 import os
@@ -18,3 +18,20 @@ subprocess.call(["wget", "https://www.llnl.gov/llnl-docs/onelab/templates/css/ma
 subprocess.call(["wget", "https://www.llnl.gov/llnl-docs/onelab/templates/css/print.css"])
 
 #in main.css need to change all url(../*conent/assets/filename.png) to url(../images/filename.png)
+maincss = "main.css"
+temphold = []
+
+find = "../content/assets/"
+replace = "../images/"
+
+mainfile = open(maincss, "r+")
+
+for line in mainfile:
+    if find in line:
+        # replace
+        temphold.appendline
+    else:
+        temphold.appendline
+
+# write temphold in to main.css
+
